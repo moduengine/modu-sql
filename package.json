@@ -1,0 +1,37 @@
+{
+  "name": "modu-sql",
+  "version": "0.1.0",
+  "description": "SQLite + Modu Network for offline-first apps with real-time sync",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "keywords": [
+    "sqlite",
+    "sync",
+    "offline-first",
+    "real-time",
+    "local-first"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "vite": "^5.0.0"
+  },
+  "peerDependencies": {
+    "modd-network": "^1.0.0"
+  }
+}

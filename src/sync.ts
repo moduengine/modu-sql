@@ -101,7 +101,7 @@ export class SyncManager {
 
   /** Convert network input to operation */
   private inputToOperation(input: NetworkInput): Operation | null {
-    if (input.data?.type !== 'sumql_op') return null;
+    if (input.data?.type !== 'modusql_op') return null;
 
     return {
       ...input.data.operation,
@@ -113,7 +113,7 @@ export class SyncManager {
   private handleLocalOperation(op: PendingOperation): void {
     if (this.connection && this.isOnline) {
       this.connection.send({
-        type: 'sumql_op',
+        type: 'modusql_op',
         operation: op
       });
     }
@@ -125,7 +125,7 @@ export class SyncManager {
 
     for (const op of this.db.pendingOps) {
       this.connection.send({
-        type: 'sumql_op',
+        type: 'modusql_op',
         operation: op
       });
     }

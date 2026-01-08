@@ -37,7 +37,7 @@ export class Database {
   /** Callback when a new operation is created locally */
   public onOperation?: (op: PendingOperation) => void;
 
-  constructor(dbName: string = 'sumql', clientId: string) {
+  constructor(dbName: string = 'modusql', clientId: string) {
     this.dbName = dbName;
     this.clientId = clientId;
   }

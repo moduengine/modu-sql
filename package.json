@@ -15,6 +15,7 @@
   },
   "scripts": {
     "build": "tsc",
+    "build:browser": "node build-browser.js",
     "dev": "tsc --watch"
   },
   "keywords": [
@@ -28,6 +29,7 @@
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
+    "esbuild": "^0.20.0",
     "typescript": "^5.0.0",
     "vite": "^5.0.0"
   },
